@@ -1,6 +1,6 @@
 // Thannathorn Somton
 // 11 AUG 2020
-// Class Balloon that can loop move and pause/continue
+// Class Multi_Balloon that can loop move and pause/continue
 class Balloon_1 {
   int x_position, y_position, radius, l_ength;
   
@@ -38,11 +38,14 @@ void mousePressed(){
    check =true;}
 }
 
-Balloon_1 A;
+Balloon_1 A,B,C,D;
 boolean check = true;
 void setup(){
  size(400,300);
- A = new Balloon_1(200,150,50,50);
+ A = new Balloon_1(50,150,50,50);
+ B = new Balloon_1(150,150,50,50);
+ C = new Balloon_1(250,150,50,50);
+ D = new Balloon_1(350,150,50,50);
 }
 
 void draw(){
@@ -50,6 +53,12 @@ void draw(){
     background(122);
     A.Draw_Ball();
     A.Move();
+    B.Draw_Ball();
+    B.Move();
+    C.Draw_Ball();
+    C.Move();
+    D.Draw_Ball();
+    D.Move();
   }
 
 }  
