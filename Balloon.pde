@@ -1,7 +1,8 @@
 // Thannathorn Somton
 // 11 AUG 2020
-// Fn Balloon that can loop move
+// Fn Balloon that can loop move and pause/continue
 int i = 325;
+boolean check = true;
 void setup(){
  size(400,300);
 }
@@ -18,10 +19,20 @@ void Balloon_1(int x_position,int y_position,int radius,int l_ength){
   line(x_position,line_start,x_position,line_end);
 }
 void draw(){
+  if (check==true){
   background(122);
   Balloon_1(200,i,50,50);
   i--;
   if (i == -75){
     i = 325;
   }
+  }
+}
+void mousePressed(){
+  if (check == true){
+   check =false;
+   }
+   else if (check ==false){
+   check =true;
+   }
 }
