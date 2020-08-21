@@ -59,6 +59,7 @@ void draw(){
     C.Move();
     D.Draw_Ball();
     D.Move();
+    A.Draw_Ball();
   }
 
 }  
